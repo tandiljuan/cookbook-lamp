@@ -15,3 +15,8 @@ normal[:apache][:aliases]          = ['www.example.com']
 normal[:apache][:listen_addresses] = '*'
 normal[:apache][:listen_ports]     = ['80']
 normal[:apache][:project_web_path] = node[:core][:workspace_path]
+
+# MySQL Settings
+default['mysql']['server_root_password']   = 'vagrant'
+default['mysql']['server_repl_password']   = 'vagrant'
+default['mysql']['server_debian_password'] = 'vagrant'
