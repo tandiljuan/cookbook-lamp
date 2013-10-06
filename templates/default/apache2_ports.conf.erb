@@ -1,0 +1,5 @@
+<% @listen_ports.each do |port| -%>
+Listen <%= (@listen_addresses.nil? or @listen_addresses === "*") ? "": "#{@listen_addresses}:" %><%= port %>
+NameVirtualHost <%= @listen_addresses %>:<%= port %>
+
+<% end -%>
