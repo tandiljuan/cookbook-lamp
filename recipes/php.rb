@@ -14,10 +14,10 @@ end
 # Alternatives to detect Apache could be:
 # * system('apache2 -v')
 # * File.directory?(node[:apache][:dir])
-if true && system("type 'apache2'")
+#if true && system("type 'apache2'")
   include_recipe "apache2::mod_php5"
   log "Restart Apache after installation of mod_php5" do
     level :info
     notifies :restart, resources("service[apache2]"), :delayed
   end
-end
+#end
